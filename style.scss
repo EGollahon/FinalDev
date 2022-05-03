@@ -1,0 +1,196 @@
+$dgreen: #365902;
+$lime: #D2D904;
+$pink: #D78BD9;
+$pink-overlay: rgba(210, 163, 217, 0.5);
+$offwhite: #E4E4E4;
+$orange: #F28705;
+$orange-overlay: rgba(242, 135, 5, 0.8);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: normal;
+    color: $dgreen;
+    font-size: 14pt;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+h1 {
+    background-color: $lime;
+    font-size: 80pt;
+    margin-bottom: 20px;
+}
+
+p {
+    span {
+        background-color: $pink;
+    }
+}
+
+nav {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        text-align: right;
+        align-items: center;
+        justify-content: flex-end;
+        list-style-type: none;
+
+        li {
+            margin-right: 40px;
+
+            a {
+                text-decoration: none;
+                color: $dgreen;
+
+                span {
+                    font-size: 12pt;
+                }
+            }
+        }
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-start;
+    justify-content: center;
+    flex-grow: 1;
+    width: 80%;
+}
+
+#home {
+    background-image: url('./assets/home.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#about {
+    background-color: $pink-overlay;
+
+    main {
+        align-items: flex-end;
+
+        img {
+            z-index: -1;
+            position: absolute;
+            object-fit: cover;
+            max-height: 80%;
+            bottom: 0px;
+            left: 5vw;
+            border-top: 40px solid $pink;
+            border-left: 20px solid $pink;
+            border-right: 30px solid $pink;
+        }
+
+        p {
+            background-color: $orange;
+        }
+    }
+}
+
+.block-button {
+    background-color: $dgreen;
+    color: $offwhite;
+    border-radius: 7px;
+    padding: 10px 20px;
+    color: $offwhite;
+}
+
+.arrow-button {
+    text-decoration: none;
+    margin: 20px 0px;
+}
+
+#search-button {
+    background-color: $dgreen;
+    color: $offwhite;
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+    height: 75px;
+    width: 75px;
+    border-radius: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrowleft {
+    background-color: $dgreen;
+    color: $offwhite;
+    position: absolute;
+    height: 75px;
+    width: 75px;
+    border-radius: 100px;
+    right: 150px;
+    bottom: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrowright {
+    background-color: $dgreen;
+    color: $offwhite;
+    position: absolute;
+    height: 75px;
+    width: 75px;
+    border-radius: 100px;
+    right: 50px;
+    bottom: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#search {
+    background-color: $orange-overlay;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 175px;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+
+    input {
+        background-color: white;
+        height: 75px;
+        color: black;
+        border: none;
+        margin: 0px 0px 50px 25px;
+        width: 50%;
+    }
+}
+
+div i {
+    color: $offwhite;
+    font-size: 20pt;
+}
+
+a i {
+    color: $dgreen;
+    font-size: 14pt;
+    margin-left: 25px;
+}
